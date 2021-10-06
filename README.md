@@ -1,1 +1,1 @@
-ng add @ng-bootstrap/ng-bootstrap
+ng add @angular/material
