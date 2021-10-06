@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'learning-angular';
+  display = false
+  toggle(){
+    this.display=!this.display
+  }
 }
