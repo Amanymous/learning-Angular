@@ -1,1 +1,32 @@
+<!-- <h1>Learning Angular</h1>
+<h1>{{ title }}</h1>
+<form #basicForm="ngForm" (submit)="getData(basicForm.value)">
+  <input type="email" name="email" placeholder="Enter email" ngModel />
+  <br /> 
+  <br />
+  <input type="password" name="password" placeholder="Enter Password" ngModel />
+  <br />
+  <br />
+  <input type="age" name="age" placeholder="Enter age" ngModel />
+  <button>Login</button>
+</form>
+<ul>
+  <li>{{userData}}</li>
+</ul> -->
 <h1>Learning Angular</h1>
+<h1>{{ title }}</h1>
+<form #basicForm="ngForm" (submit)="getData(basicForm.value)">
+  <input type="email" name="email" placeholder="Enter email" ngModel />
+  <br /> 
+  <br />
+  <input type="password" name="password" placeholder="Enter Password" ngModel />
+  <br />
+  <br />
+  <input type="age" name="age" placeholder="Enter age" ngModel />
+  <button>Login</button>
+</form>
+<ul>
+  <li>{{userData.email}}</li>
+  <li>{{userData.password}}</li>
+  <li>{{userData.age}}</li>
+</ul>
