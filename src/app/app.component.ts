@@ -7,5 +7,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Angular Template Driven Form';
- name:any
+  getVal(item:any){ //or htmlInputElement
+   console.log(item)
+ }
 }

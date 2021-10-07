@@ -1,4 +1,4 @@
-<h1>Two way binding</h1>
-<input type="text" [(ngModel)]="name"/>
-<h1>{{name}}</h1>
+<h1>Template Reference Variable</h1>
+<input type="text" name="user" placeholder="Enter name" #box/>
+<button (click)="getVal(box.value)">call function</button>
 
