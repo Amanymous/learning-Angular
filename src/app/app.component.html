@@ -1,4 +1,4 @@
-<h1>Reusable Component</h1>
-<ul *ngFor="let user of userDetails">
-    <app-user-details [item]='user'></app-user-details>
-</ul>
+<h1>Two way binding</h1>
+<input type="text" [(ngModel)]="name"/>
+<h1>{{name}}</h1>
+
