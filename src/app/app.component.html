@@ -1,32 +1,11 @@
-<!-- <h1>Learning Angular</h1>
-<h1>{{ title }}</h1>
-<form #basicForm="ngForm" (submit)="getData(basicForm.value)">
-  <input type="email" name="email" placeholder="Enter email" ngModel />
-  <br /> 
-  <br />
-  <input type="password" name="password" placeholder="Enter Password" ngModel />
-  <br />
-  <br />
-  <input type="age" name="age" placeholder="Enter age" ngModel />
-  <button>Login</button>
-</form>
-<ul>
-  <li>{{userData}}</li>
-</ul> -->
-<h1>Learning Angular</h1>
-<h1>{{ title }}</h1>
-<form #basicForm="ngForm" (submit)="getData(basicForm.value)">
-  <input type="email" name="email" placeholder="Enter email" ngModel />
-  <br /> 
-  <br />
-  <input type="password" name="password" placeholder="Enter Password" ngModel />
-  <br />
-  <br />
-  <input type="age" name="age" placeholder="Enter age" ngModel />
-  <button>Login</button>
-</form>
-<ul>
-  <li>{{userData.email}}</li>
-  <li>{{userData.password}}</li>
-  <li>{{userData.age}}</li>
+<h1>TodoList In Angular</h1>
+<input type="text" placeholder="Enter New Task" #task />
+<br>
+<br>
+<button (click)="addTask(task.value)">Add New Task</button>
+<br>
+<br>
+
+<ul *ngFor="let item of list">
+<li>{{item.name}} <button (click)="removeTask(item.id)">x</button></li>
 </ul>
