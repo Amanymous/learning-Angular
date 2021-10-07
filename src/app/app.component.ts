@@ -7,14 +7,12 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Angular Template Driven Form';
-  list:any[]=[]
-  addTask(item:string){
-    this.list.push({id:this.list.length,name:item})
-    console.log(this.list)
-    console.log(item)
-  }
-  removeTask(id:number){
-    console.log(id)
-    this.list = this.list.filter(item=>item.id!== id)
-  }
+data=10
+data1 = 11
+updateChild(){
+  this.data = Math.floor(Math.random()*10)
+}
+updateChildern(){
+  this.data1 = Math.floor(Math.random()*10)
+}
 }

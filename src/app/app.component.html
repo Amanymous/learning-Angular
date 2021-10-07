@@ -1,11 +1,5 @@
-<h1>TodoList In Angular</h1>
-<input type="text" placeholder="Enter New Task" #task />
-<br>
-<br>
-<button (click)="addTask(task.value)">Add New Task</button>
-<br>
-<br>
-
-<ul *ngFor="let item of list">
-<li>{{item.name}} <button (click)="removeTask(item.id)">x</button></li>
-</ul>
+<h1>Send Data To Parent Child In Angular</h1>
+<app-child [item]="data" ></app-child>
+<button (click)="updateChild()">Update child component</button>
+<app-childern [Child]="data1"></app-childern>
+<button (click)="updateChildern()">Update childern component</button>
