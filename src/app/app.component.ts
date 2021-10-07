@@ -8,9 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'learning-angular';
  
-  hidden = false;
-
-  toggleBadgeVisibility() {
-    this.hidden = !this.hidden;
+  userLogin(item:any){
+    console.log(item)
   }
 }
