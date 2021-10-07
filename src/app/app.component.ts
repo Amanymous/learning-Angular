@@ -7,8 +7,8 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Angular Pipes';
-  today = Date()
-  capitalString(item:string){
-    return item.toUpperCase()
+  user = {
+    name:'aman',
+    age:22
   }
 }
