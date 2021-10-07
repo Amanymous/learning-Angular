@@ -6,8 +6,9 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Angular Template Driven Form';
-  getVal(item:any){ //or htmlInputElement
-   console.log(item)
- }
+  title = 'Angular Pipes';
+  today = Date()
+  capitalString(item:string){
+    return item.toUpperCase()
+  }
 }

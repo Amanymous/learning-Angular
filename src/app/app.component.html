@@ -1,4 +1,7 @@
-<h1>Template Reference Variable</h1>
-<input type="text" name="user" placeholder="Enter name" #box/>
-<button (click)="getVal(box.value)">call function</button>
+<h1>{{title | uppercase}}</h1>
+<h1>{{title | lowercase}}</h1>
+<h1>{{title}}</h1>
+<h1>{{today | date:'fullDate'}}</h1>
+<h1>{{capitalString(title)}}</h1>
+
 
