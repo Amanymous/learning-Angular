@@ -1,8 +1,13 @@
-<h1>Template driven form Validations</h1>
-<form #loginForm="ngForm" (ngSubmit)=userLogin(loginForm.value)>
-  <input type="text" placeholder="Enter Name" name="name" ngModel><br><br>
-  <input type="password" placeholder="Enter password" name="password" ngModel><br><br>
-  <button>Login</button>
+<h1>Reactive form Validations</h1>
+<form #loginForm="ngForm" (ngSubmit)="loginUser()">
+  <input type="email" required #name="ngModel" pattern="[a-zA-Z]+$" name="name" placeholder="Enter Name" ngModel />
+  <br /> 
+  <span *ngIf="name.invalid && name.touched" style="color: red;" >Please enter a Valid input</span><br />
+  <br />
+  <input type="password" name="password" minlength="2" required #password="ngModel" placeholder="Enter Password" ngModel />
+  <br />
+  <span *ngIf="password.invalid && password.touched" style="color: red;" >Please enter a Valid input</span><br />
+  <br />
+  <button [disabled]="loginForm.invalid">Login</button>
 </form>
-<button (click)=userLogin(loginForm.controls)>Out Side Login</button>
-  
+<!-- <button (click)=loginUser(loginForm.controls)>Out Side Login</button> -->
