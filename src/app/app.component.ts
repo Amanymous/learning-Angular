@@ -7,12 +7,24 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Angular Template Driven Form';
-data=10
-data1 = 11
-updateChild(){
-  this.data = Math.floor(Math.random()*10)
-}
-updateChildern(){
-  this.data1 = Math.floor(Math.random()*10)
-}
+  userDetails = [
+    {
+      name: 'Aman', Email: "test@.com"
+    },
+    {
+      name: 'Aman1', Email: "test1@.com"
+    }
+    ,
+    {
+      name: 'Aman2', Email: "test2@.com"
+    }
+    ,
+    {
+      name: 'Aman3', Email: "test3@.com"
+    }
+    , {
+      name: 'Aman4', Email: "test4@.com"
+    }
+
+  ]
 }
