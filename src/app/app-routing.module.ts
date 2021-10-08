@@ -5,15 +5,15 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 
 const routes: Routes = [{
-  path:'about',
+  path:'about/:id',
   component:AboutComponent
 },
 {
-  path:'user',
+  path:'user/:id',
   component:UserComponent
 },
 {
-  path:'home',
+  path:'home/:id',
   component:HomeComponent
 }
 ];
