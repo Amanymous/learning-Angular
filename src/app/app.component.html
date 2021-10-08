@@ -1,8 +1,7 @@
-<h1>what we service</h1>
+<h1>Make Service</h1>
 <ul>
-    <li *ngFor="let data of memberData">
-        {{data.name}}
-        {{data.email}}
+    <li *ngFor="let user of users">
+        {{user.name}}{{user.age}}{{user.email}}
     </li>
 </ul>
 <app-footer></app-footer>

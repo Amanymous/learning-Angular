@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDataService } from '../service/user-data.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,15 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  users:any
+ constructor(private userData:UserDataService){
+   console.log("user data",userData.users())
+   this.users = userData.users()
+ }
 
   ngOnInit(): void {
   }
-  memberData = [
-    {name:'aman',email:'test@.com'},
-    {name:'aman1',email:'test1@.com'},
-    {name:'aman2',email:'test2@.com'},
-    {name:'aman3',email:'test3@.com'}
-  ]
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserDataService } from './service/user-data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'learning-angular';
-  memberData = [
-    {name:'aman',email:'test@.com'},
-    {name:'aman1',email:'test1@.com'},
-    {name:'aman2',email:'test2@.com'},
-    {name:'aman3',email:'test3@.com'}
-  ]
+  users:any
+ constructor(private userData:UserDataService){
+   console.log("user data",userData.users())
+   this.users = userData.users()
+ }
 }
