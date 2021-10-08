@@ -8,9 +8,13 @@ import { UserDataService } from './service/user-data.service';
 })
 export class AppComponent {
   title = 'learning-angular';
-  users:any
+  todos:any
  constructor(private userData:UserDataService){
-   console.log("user data",userData.users())
-   this.users = userData.users()
+   console.log("user data",userData.todos().subscribe((data)=>{
+     console.log(data)
+   this.todos=data
+  }))
+    console.log(this.todos)
+   //  this.users = userData.users()
  }
 }
