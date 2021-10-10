@@ -1,7 +1,11 @@
-<h1>Post API Method</h1>
-<form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
-    <input type="name" ngModel name="name" placeholder="Enter Name"><br><br>
-    <input type="email" ngModel name="email" placeholder="Enter email"><br><br>
-    <input type="password" ngModel name="password" placeholder="Enter password"><br><br>
-    <button>Add New User</button>
-</form>
+<h1>Recap Module and Routing</h1>
+<ul>
+    <li>
+        <a routerLink="login">Go To Login Page</a>
+    </li>
+    <li>
+        <a routerLink="list">Go To list Page</a>
+    </li>
+</ul>
+<router-outlet></router-outlet>
+
