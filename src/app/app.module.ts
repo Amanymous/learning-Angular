@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AdminModule } from './admin/admin.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { AdminModule } from './admin/admin.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule,FormsModule,AdminModule
+    AppRoutingModule,HttpClientModule,FormsModule,AdminModule,UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
