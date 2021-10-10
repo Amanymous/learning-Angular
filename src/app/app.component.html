@@ -1,7 +1,7 @@
-<h1>Make Service</h1>
-<ul>
-    <li *ngFor="let todo of todos">
-        {{todo.name}}{{todo.age}}{{todo.email}}
-    </li>
-</ul>
-<app-footer></app-footer>
+<h1>Post API Method</h1>
+<form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+    <input type="name" ngModel name="name" placeholder="Enter Name"><br><br>
+    <input type="email" ngModel name="email" placeholder="Enter email"><br><br>
+    <input type="password" ngModel name="password" placeholder="Enter password"><br><br>
+    <button>Add New User</button>
+</form>
