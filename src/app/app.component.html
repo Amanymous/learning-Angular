@@ -1,7 +1,10 @@
-<h1>Make Service</h1>
+<h1>Lazy Loading</h1>
 <ul>
-    <li *ngFor="let todo of todos">
-        {{todo.name}}{{todo.age}}{{todo.email}}
+    <li>
+        <a routerLink="admin/list">Login</a>
+    </li>
+    <li>
+        <a routerLink="admin/login">List</a>
     </li>
 </ul>
-<app-footer></app-footer>
+<router-outlet></router-outlet>
