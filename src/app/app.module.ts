@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { UserListComponent } from './user-list/user-list.component';
+import { AdminListComponent } from './admin-list/admin-list.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserListComponent,
+    AdminListComponent
 
   ],
   imports: [
