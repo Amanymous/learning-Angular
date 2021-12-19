@@ -1,18 +1,28 @@
-<h1>Group  Routing</h1>
-<ul>
-    <li>
-        <a routerLink="admin/login">Go To Login Page</a>
-    </li>
-    <li>
-        <a routerLink="admin/list">Go To list Page</a>
-    </li>
-</ul>
-<ul>
-    <li>
-        <a routerLink="user/login">Go To Login Page</a>
-    </li>
-    <li>
-        <a routerLink="user/list">Go To list Page</a>
-    </li>
-</ul>
-<router-outlet></router-outlet>
+<!-- <app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes></app-recipes>
+      <app-shopping-list></app-shopping-list>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        class="btn btn-primary"
+        (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
+      <br><br>
+      <ul class="list-group">
+        <li
+          class="list-group-item">
+        </li>
+      </ul>
+      <ng-template [ngIf]="onlyOdd">
+        <p>Only odd</p>
+      </ng-template>
+    </div>
+  </div>
+</div>
