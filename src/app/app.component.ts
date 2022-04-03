@@ -1,44 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AccountsService } from './accounts.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  // providers:[AccountsService]
 })
-export class AppComponent {
-  // loadedFeature = 'recipe';
+export class AppComponent implements OnInit{
 
-  // onNavigate(feature: string) {
-  //   this.loadedFeature = feature;
-  // }
+ accounts:{name:string,status:string}[] = []
 
-  accounts =[
-    {
-      name: 'Master Account',
-      status: 'active'
-    },
-    {
-      name: 'Test Account',
-      status: 'inactive'
-    },
-    {
-      name: 'Hidden Account',
-      status: 'unknown'
-    }
-  ]
+ constructor(private accountsService:AccountsService){
 
-  onAccountAdded(newAccount:{name:string,status:string}){
-    this.accounts.push(newAccount)
-  }
-
-  onStatusChanged(updateInfo:{id:number,newStatus:string}){
-    this.accounts[updateInfo.id].status = updateInfo.newStatus
-  }
-  // onAccountAdded(newAccount:{name:string,status:string}){
-  //   this.accounts.push(newAccount)
-  // }
-
-  // onStatusChanged(updateInfo:{id:number,newStatus:string}){
-  //   this.accounts[updateInfo.id].status = updateInfo.newStatus
-  // }
+ }
+ ngOnInit(): void {
+     this.accounts = this.accountsService.accounts
+ }
+ 
 }
