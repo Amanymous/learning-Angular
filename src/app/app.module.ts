@@ -16,6 +16,8 @@ import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
 import { AccountsService } from './accounts.service';
 import { LoggingService } from './logging.service';
+import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+import { ActiveUsersComponent } from './active-users/active-users.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { LoggingService } from './logging.service';
     ShoppingEditComponent,
     DropdownDirective,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    InactiveUsersComponent,
+    ActiveUsersComponent
   ],
   imports: [
     BrowserModule,

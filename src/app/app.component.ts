@@ -7,15 +7,18 @@ import { AccountsService } from './accounts.service';
   styleUrls: ['./app.component.css'],
   // providers:[AccountsService]
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
 
- accounts:{name:string,status:string}[] = []
+  activeUsers = ['Max', 'Anna'];
+  inactiveUsers = ['Chris', 'Manu'];
 
- constructor(private accountsService:AccountsService){
+  onSetToInactive(id: number) {
+    this.inactiveUsers.push(this.activeUsers[id]);
+    this.activeUsers.splice(id, 1);
+  }
 
- }
- ngOnInit(): void {
-     this.accounts = this.accountsService.accounts
- }
- 
+  onSetToActive(id: number) {
+    this.activeUsers.push(this.inactiveUsers[id]);
+    this.inactiveUsers.splice(id, 1);
+  }
 }
