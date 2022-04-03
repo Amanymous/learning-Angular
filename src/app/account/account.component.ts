@@ -9,14 +9,15 @@ import { LoggingService } from '../logging.service';
   // providers:[LoggingService]
 })
 export class AccountComponent {
-  @Input() account:{name:string,status:string}
-  @Input() id:number
+  @Input() account: {name: string, status: string};
+  @Input() id: number;
 
-  constructor(private loggingService:LoggingService,
-              private accountsService:AccountsService){}
-  onSetTo(status:string){
+  constructor(private loggingService: LoggingService,
+              private accountsService: AccountsService) {}
 
-    this.loggingService.logStatusChange(status)
-    this.accountsService.updateStatus(this.id,status)
+  onSetTo(status: string) {
+    this.accountsService.updateStatus(this.id, status);
+    // this.loggingService.logStatusChange(status);
+    this.accountsService.statusUpdated.emit(status);
   }
 }

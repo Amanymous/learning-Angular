@@ -9,13 +9,15 @@ import { LoggingService } from '../logging.service';
   // providers:[LoggingService]
 })
 export class NewAccountComponent {
- @Output() accountAdded = new EventEmitter<{name:string,status:string}>()
+  constructor(private loggingService: LoggingService,
+    private accountsService: AccountsService) {
+    this.accountsService.statusUpdated.subscribe(
+      (status: string) => alert('New Status: ' + status)
+    );
+  }
 
- constructor(private loggingService:LoggingService,
-             private accountsService:AccountsService){}
-
- onCreateAccount(accountName:string,accountStatus:string){
-   this.accountsService.addAccount(accountName,accountStatus)
-   this.loggingService.logStatusChange(accountStatus)
- }
+  onCreateAccount(accountName: string, accountStatus: string) {
+    this.accountsService.addAccount(accountName, accountStatus);
+    // this.loggingService.logStatusChange(accountStatus);
+  }
 }
